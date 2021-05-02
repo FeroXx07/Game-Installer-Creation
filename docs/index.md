@@ -35,3 +35,11 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+### Installation
+Let’s start with the basics, Installation of a computer program is **the act of making the program ready for execution**. Installation refers to the configuration of a software or hardware with a view to making it usable with the computer. A soft or digital copy of the piece of software (program) is needed to install it. 
+
+The **process** and the **management** of these kind of activities take a **big role** in many desktop and laptop **manufacturing companies**, so for these it is important that their hardware products function more efficiently, reduce end-user support costs, and minimize end-user business disruptions. 
+
+One such technique is **application packaging**, which is a critical component of an overall software configuration management strategy.
+

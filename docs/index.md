@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Game Installer Creation
 
 You can use the [editor on GitHub](https://github.com/FeroXx07/Game-Installer-Creation/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 

@@ -80,3 +80,11 @@ Packaging bundles applications and operating systems into a single file called a
 -	A solid package signed with a digital signature/certificate ensure that the distribution unit cannot be corrupted purposely when on the retail or end-user.
 -	Upgrading of the application can be done with ease.
 -	Customize Applications to suit the user needs.
+
+### Some Packaging formats:
+-	Legacy executables `Setup.exe`
+-	Microsoft Windows Installer `Setup.msi`
+-	Windows store `.appx`
+-	Batch/script files `Install.vbs, Install.ps1, Install.bat`
+-	Loose Files / Raw Files
+

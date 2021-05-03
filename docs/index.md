@@ -90,3 +90,20 @@ This process makes it easier to deploy and install them on user's computers.
 -	Batch/script files `Install.vbs, Install.ps1, Install.bat`
 -	Loose Files / Raw Files
 
+## Microsoft Windows Installer
+Is database-driven service that resides on workstations and controls the installing, uninstalling, patching, and repairing of software. Windows Installer is an .msi formatted file.
+
+The installer consists of two executable components:
+
+-	a Client Install Engine that runs with user privileges (msiexec.exe)
+-	a Install Service that can run with elevated administrative privileges because it is implemented as a Windows Service
+
+
+### Brief History of why Microsoft Windows Installer exists:
+
+Some time ago, the packages used the format .exe, but this had some limitations, as software developers and software vendors who created these installation packages practiced some inconsistencies, difficulting the path to the automation of installations.
+
+A standard was needed, and the Microsoft Windows installer emerged as one, it uses msiexec.exe program to process the installation packages at an end user's PC. The packages follow a standardized database structure containing the information that Windows Installer requires to install or uninstall an application and to run the user interface for the setup.
+
+Each installation package includes an .msi file containing the installation database, a summary information for various parts of the installation. The .msi file can also contain one or more transforms, internal source files, and external source files or cabinet files required by the installation.
+

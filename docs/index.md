@@ -111,4 +111,18 @@ The MSI Packaged Installation usually takes place in two phases:
 **Execution:** Once when the required information is collected from the user and the database, the MSI executes the Installation script and kicks off the installation of components.
 The Windows installer also has the ability to detect and restore the resources of an application, which are required to make its successful execution (verification).
 
+## Main Packaging tools
 
+In the industry there are many packaging tools. The top ones are the following:
+
+-**InstallShield:** Has good release management, localization and automation features for build process automation. Best for complex products and has release flags, very valuable to conditionally exclude or include certain parts of the product from each compiled setup. It also has a well-integrated GUI. Best for small development teams.
+![Install Shield](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/InstallShield.png)
+
+
+-**Advanced Installer:** Feature rich. Compiles all kinds of setups and supports all new technologies. Support for App-V (Microsoft Application Virtualization) seems very extensive. Best for corporate teams.
+
+![Advanced Installer](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/AdvanceInstaller.jpg)
+
+-**Wix:** The main selling point is the text source files. There is no need to store the source as a binary where it is almost impossible to track changes and do proper version control. This helps a lot when working in different branches, versions, and merging. And it has Full integration in Visual Studio.
+
+![Wix](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/WixTool.gif)

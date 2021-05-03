@@ -52,19 +52,19 @@ One such technique is **application packaging**, which is a critical component o
 
 **2. Silent installation**
 
-![Silent installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/SilentInstaller.png)
+![Silent installation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/SilentInstaller.png)
 
   Installation that does not display messages or windows during its progress.
 
 **3. Unattended installation**
 
-![Unattended installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/UnattendedInstallation.png)
+![Unattended installation](hhttps://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/UnattendedInstallation.png)
 
   Installation that is performed without user interaction during its progress or with no user present at all.
 
 **4. Network installation**
 
-![Network installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/NewtorkInstaller.jpg)
+![Network installation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/NewtorkInstaller.jpg)
 
   Network installation, may be done by installing a minimal system before proceeding to download further packages over the network.
 

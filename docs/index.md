@@ -46,7 +46,7 @@ One such technique is **application packaging**, which is a critical component o
 ## TYPES OF INSTALLATIONS
 **1. Attended installation**
 
-![Attended installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/gifs/WizardGIF.gif)
+![Attended installation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/WizardGIF.gif)
 
   Is the most common form of installation. An installation process usually needs a user who attends it to make choices, such as accepting or declining an end-user license      agreement (EULA), specifying preferences such as the installation location, supplying passwords or assisting in product activation.
 

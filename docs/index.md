@@ -28,14 +28,6 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/FeroXx07/Game-Installer-Creation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
-
 ## What is Installation?
 Let’s start with the basics, Installation of a computer program is **the act of making the program ready for execution**. Installation refers to the configuration of a software or hardware with a view to making it usable with the computer. A soft or digital copy of the piece of software (program) is needed to install it. 
 
@@ -58,7 +50,7 @@ One such technique is **application packaging**, which is a critical component o
 
 **3. Unattended installation**
 
-![Unattended installation](hhttps://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/UnattendedInstallation.png)
+![Unattended installation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/UnattendedInstallation.png)
 
   Installation that is performed without user interaction during its progress or with no user present at all.
 
@@ -98,6 +90,7 @@ The installer consists of two executable components:
 -	a Client Install Engine that runs with user privileges `msiexec.exe`
 -	a Install Service that can run with elevated administrative privileges because it is implemented as a Windows Service
 
+![Client and service](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/MSIInstaller.jpg)
 
 ### Brief History of why Microsoft Windows Installer exists:
 
@@ -106,4 +99,16 @@ Some time ago, the packages used the format .exe, but this had some limitations,
 A standard was needed, and the Microsoft Windows installer emerged as one, it uses `msiexec.exe` program to process the installation packages at an end user's PC. The packages follow a standardized database structure containing the information that Windows Installer requires to install or uninstall an application and to run the user interface for the setup.
 
 The package file contains the installation database and a summary stream. Optionally, the package file can contain additional streams with the actual file bits compressed in cabinet files `.cab`. Package files have the extension `.msi` and are associated with `msiexec.exe`, which kicks off the installation process.
+
+### MSI Installation process
+
+The MSI Packaged Installation usually takes place in two phases:
+1. Acquisition
+2. Execution
+
+**Acquisition:** The acquisition is further divided into two phases, in which the first phase collects the information from the user and the second phase acquires the information from the MSI database. Over here, the Windows installer will generate the installation and the un-installation scripts.
+
+**Execution:** Once when the required information is collected from the user and the database, the MSI executes the Installation script and kicks off the installation of components.
+The Windows installer also has the ability to detect and restore the resources of an application, which are required to make its successful execution (verification).
+
 

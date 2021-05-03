@@ -70,7 +70,9 @@ One such technique is **application packaging**, which is a critical component o
 
 ## What is Packaging?
 Application packaging is a process of binding the relevant files and components to build a customized application for a customer.
-Packaging bundles applications and operating systems into a single file called a distribution unit, which format can vary depending on the installer and the operating system, which makes it easier to deploy and install them on user's computers.
+Packaging bundles applications and operating systems into a single file called a distribution unit, which format can vary depending on the installer and the operating system.
+
+This process makes it easier to deploy and install them on user's computers.
 
 ### Some advantages of application packaging
 

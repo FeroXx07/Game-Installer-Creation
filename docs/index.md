@@ -46,25 +46,25 @@ One such technique is **application packaging**, which is a critical component o
 ## TYPES OF INSTALLATIONS
 **1. Attended installation**
 
-![](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/gifs/WizardGIF.gif)
+![Attended installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/gifs/WizardGIF.gif)
 
   Is the most common form of installation. An installation process usually needs a user who attends it to make choices, such as accepting or declining an end-user license      agreement (EULA), specifying preferences such as the installation location, supplying passwords or assisting in product activation.
 
 **2. Silent installation**
 
-![](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/SilentInstaller.png)
+![Silent installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/SilentInstaller.png)
 
   Installation that does not display messages or windows during its progress.
 
 **3. Unattended installation**
 
-![](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/UnattendedInstallation.png)
+![Unattended installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/UnattendedInstallation.png)
 
   Installation that is performed without user interaction during its progress or with no user present at all.
 
 **4. Network installation**
 
-![](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/NewtorkInstaller.jpg)
+![Network installation](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/images/NewtorkInstaller.jpg)
 
   Network installation, may be done by installing a minimal system before proceeding to download further packages over the network.
 

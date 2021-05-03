@@ -95,7 +95,7 @@ Is database-driven service that resides on workstations and controls the install
 
 The installer consists of two executable components:
 
--	a Client Install Engine that runs with user privileges (msiexec.exe)
+-	a Client Install Engine that runs with user privileges `msiexec.exe`
 -	a Install Service that can run with elevated administrative privileges because it is implemented as a Windows Service
 
 
@@ -103,7 +103,7 @@ The installer consists of two executable components:
 
 Some time ago, the packages used the format .exe, but this had some limitations, as software developers and software vendors who created these installation packages practiced some inconsistencies, difficulting the path to the automation of installations.
 
-A standard was needed, and the Microsoft Windows installer emerged as one, it uses msiexec.exe program to process the installation packages at an end user's PC. The packages follow a standardized database structure containing the information that Windows Installer requires to install or uninstall an application and to run the user interface for the setup.
+A standard was needed, and the Microsoft Windows installer emerged as one, it uses `msiexec.exe` program to process the installation packages at an end user's PC. The packages follow a standardized database structure containing the information that Windows Installer requires to install or uninstall an application and to run the user interface for the setup.
 
-Each installation package includes an .msi file containing the installation database, a summary information for various parts of the installation. The .msi file can also contain one or more transforms, internal source files, and external source files or cabinet files required by the installation.
+The package file contains the installation database and a summary stream. Optionally, the package file can contain additional streams with the actual file bits compressed in cabinet files `.cab`. Package files have the extension `.msi` and are associated with `msiexec.exe`, which kicks off the installation process.
 

@@ -134,7 +134,7 @@ The selected approach will be Wix, because it excels in its flexibility, extensi
 
 ![WiXLogo](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/WiXLOGO.png)
 
-Before starting, let’s go to the basics. We will need to install two toolsets from Wix toolset.
+Before starting, let’s go to the basics. You will need to install two toolsets from Wix toolset.
 The first one is the “WiX Toolset build tools” that includes everything you need to create installations on your development and build machines. And the second one is the “WiX Toolset Visual Studio Extension” that provides integration for the WiX Toolset into Visual Studio.
 
 [Download WiX Toolset build tools](https://wixtoolset.org/releases/v3.11.2/stable)

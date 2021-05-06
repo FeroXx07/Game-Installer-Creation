@@ -28,7 +28,7 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-## What is Installation?
+## What is a Installation?
 Let’s start with the basics, Installation of a computer program is **the act of making the program ready for execution**. Installation refers to the configuration of a software or hardware with a view to making it usable with the computer. A soft or digital copy of the piece of software (program) is needed to install it. 
 
 The **process** and the **management** of these kind of activities take a **big role** in many desktop and laptop **manufacturing companies**, so for these it is important that their hardware products function more efficiently, reduce end-user support costs, and minimize end-user business disruptions. 
@@ -123,6 +123,24 @@ In the industry there are many packaging tools. The top ones are the following:
 
 ![Advanced Installer](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/AdvanceInstaller.jpg)
 
--**Wix:** The main selling point is the text source files. There is no need to store the source as a binary where it is almost impossible to track changes and do proper version control. This helps a lot when working in different branches, versions, and merging. And it has Full integration in Visual Studio.
+-**WiX:** The main selling point is the text source files. There is no need to store the source as a binary where it is almost impossible to track changes and do proper version control. This helps a lot when working in different branches, versions, and merging. And it has Full integration in Visual Studio.
 
 ![Wix](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/WixTool.gif)
+
+## WiX Toolset
+
+### Prerequisites
+The selected approach will be Wix, because it excels in its flexibility, extensibility, stability, and the use of XML text source. And due to its free license, every developer can view and compile the source and changes are easily tracked, reverted, or approved.
+
+![WiXLogo](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/WiXLOGO.png)
+
+Before starting, let’s go to the basics. We will need to install two toolsets from Wix toolset.
+The first one is the “WiX Toolset build tools” that includes everything you need to create installations on your development and build machines. And the second one is the “WiX Toolset Visual Studio Extension” that provides integration for the WiX Toolset into Visual Studio.
+
+[Download WiX Toolset build tools](https://wixtoolset.org/releases/v3.11.2/stable)
+
+[Download WiX Visual Studio Extension](https://wixtoolset.org/releases/)
+
+In the creation of the installer script, you will have to define properties and add directories and components. You will see this now.
+
+### Setup and Creation of the script.

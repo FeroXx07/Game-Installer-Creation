@@ -147,7 +147,7 @@ In the creation of the installer script, you will have to define properties and 
 
 In order to create the script, you will have to add a new project in the Visual Studio solution. The type of project needs to be the following: “Setup Project for WiX v3”. 
 
-![CreationScript](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/gifs/CreationOfTheScript.gif)
+![CreationScript](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/CreationOfTheScript.gif)
 
 This will create a generic script file `product.wxs` that will be the container of the components of our installer  (all files including assets and `.exe` of the application) and the project file itself `.wixproj`, this last one contains properties for the creation of the installer.
 

@@ -143,13 +143,37 @@ The first one is the “WiX Toolset build tools” that includes everything you 
 
 In the creation of the installer script, you will have to define properties and add directories and components. You will see this now.
 
-### Setup and Creation of the script.
+### Setup and creation of the script.
 
 In order to create the script, you will have to add a new project in the Visual Studio solution. The type of project needs to be the following: “Setup Project for WiX v3”. 
 
 ![CreationScript](https://github.com/FeroXx07/Game-Installer-Creation/blob/main/docs/gifs/CreationOfTheScript.gif)
 
-This will create a generic script file `product.wxs` that will contain the components of our installer (all files including assets and exe of the application) and the project file itself `.wixproj`, this last one contains properties for the creation of the installer.
+This will create a generic script file `product.wxs` that will be the container of the components of our installer  (all files including assets and `.exe` of the application) and the project file itself `.wixproj`, this last one contains properties for the creation of the installer.
 
 ![AfterCreation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/AfterSetup.PNG)
+
+The next step to be done is the creation of a unique file that will harvest and include all our assets and `dll` files automatically, through a special internal application: **Heat.exe** (it’s a WiX tool component). This file will be named `HeatGeneratedFileList.wxs` and to enable the harvesting feature we have to put _“Heat Directory”_ properties inside `.wixproj` with the file name correctly.
+
+![HeatFileCreation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/HeatGeneratedFileListCreation.PNG)
+
+![AfterHeatCreation1](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/AfterHeat2.PNG)
+
+Below is the necessary code of the _“Heat Directory”_ to enable heat.exe:
+
+```XML
+<!--OutputFile will have the name of the file created before -->
+<Target Name="BeforeBuild">
+  <HeatDirectory Directory="..\Output" 
+    PreprocessorVariable="var.HarvestPath" 
+    OutputFile="HeatGeneratedFileList.wxs"
+    ComponentGroupName="HeatGenerated" 
+    DirectoryRefId="INSTALLFOLDER" 
+    AutogenerateGuids="true" 
+    ToolPath="$(WixToolPath)" 
+    SuppressFragments="true" 
+    SuppressRegistry="true" 
+    SuppressRootDirectory="true" />  
+</Target>
+```
 

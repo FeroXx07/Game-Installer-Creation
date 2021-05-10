@@ -289,10 +289,10 @@ Into Shortcut Id fragments:
 ```
 |       WiX      |       ICON     |     SIZES    |
 | -------------  | -------------  |------------- |
-|Icon | icon.ico | 16×16          ||
-|Icon | icon.ico | 32 * 32        ||
-|Icon | icon.ico |48 * 48         ||
-|Icon | icon.ico |256 * 256       ||
+|Icon            | icon.ico       |16×16         |
+|Icon            | icon.ico       |32 * 32       |              
+|Icon            | icon.ico       |48 * 48       |              
+|Icon            | icon.ico       |256 * 256     |              
 
 ![STEP4](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4.PNG)
 
@@ -329,6 +329,7 @@ Into Product fragment:
 | ------------- | ------------- |------------- |
 |WixUIBannerBmp | Top banner    | 493 × 58     |
 |WixUIDialogBmp | Background bitmap used on the welcome and completion dialogs | 493 × 312     |
+
 
 ![STEP5](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP5.PNG)
 

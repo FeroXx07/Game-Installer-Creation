@@ -143,7 +143,7 @@ The first one is the “WiX Toolset build tools” that includes everything you 
 
 In the creation of the installer script, you will have to define properties and add directories and components. You will see this now.
 
-### Setup and creation of the script.
+## Setup and creation of the script.
 
 In order to create the script, you will have to add a new project in the Visual Studio solution. The type of project needs to be the following: “Setup Project for WiX v3”. 
 
@@ -175,5 +175,32 @@ Below is the necessary code of the _“Heat Directory”_ to enable heat.exe:
     SuppressRegistry="true" 
     SuppressRootDirectory="true" />  
 </Target>
+```
+Now, that everything is prepared, the next step is to link **components** (.exe, assets, dll) and **directories** (program folder, desktop shortcut, start menu shortcut) inside the `product.wxs`.
+
+Before going deep into this, it is recommended to read the documentation or the user [manual](https://wixtoolset.org/documentation/manual/v3/) provided by Wix Toolset.
+
+Shortly explained, the script is divided by **fragments**, we use **component and directories references** to tell the framework other components and directories that **exist** in other **fragments**.
+
+Components have **GUID** to avoid duplications in updates o reparations. You can use this [website](https://www.guidgenerator.com/online-guid-generator.aspx) to generate GUIDs or use the visual studio internal tool to generate GUIDs. The step 0 is to change the **Manufacturer** name to the name of you studio, otherwise it won’t build.
+
+## Customization and mapping of the script.
+
+### Step 1
+
+**Description:**
+We have to add the .exe file of our application as a component inside a component or component group. In this case, there is already existing a component group, so we just have to add our component code fragment.
+
+**CODE:**
+Into the Component fragment:
+
+```XML
+<Component Id="Game.exe" Guid="4b886816-febd-4e5c-a87f-923960027d5c">
+                <File Id="Game.exe" Source="..\Build\Release\Motor 2D.exe" KeyPath="yes" Checksum="yes" />
+            </Component> 
+```
+Into the Feature fragment:
+```XML
+<ComponentRef Id="Motor_2D.exe"/>
 ```
 

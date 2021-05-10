@@ -252,6 +252,44 @@ Into Feature fragment:
 ![STEP2](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP2.PNG)
 
 **EXPECTED OUTCOME:**
-If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and it can be uninstalled through Control Panel.
+If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and it could be uninstalled through Control Panel.
 
 ![STEP2OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP2OUTCOME.PNG)
+
+### Step 3
+
+**Description:**
+We have to add the desktop shortcut, do same as the previous step, but with minor changes like the different directory, in this case DesktopFolder is the directory. 
+
+**CODE:**
+
+Into Directory System fragment:
+```XML
+<Directory Id="DesktopFolder" Name="My UPC App" />
+```
+
+Into Shortcut Component fragment:
+```XML
+ <DirectoryRef Id="DesktopFolder">
+       <Component Id="DesktopShortcut" Guid="c0f4eeec-8988-4c58-8a0a-2ebac04e2a2a">
+          <Shortcut Id="ApplicationDesktopShortcut" 
+                 Name="My UPC aPP" 
+                 Description="My UPC Game Description"
+                 Target="[#Game.exe]"
+                 WorkingDirectory="INSTALLFOLDER"/>
+          <RemoveFolder Id="RemoveDesktopFolder" On="uninstall"/>
+          <RegistryValue Root="HKCU" Key="Software\MyCompany\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+       </Component>
+   </DirectoryRef>
+```
+
+Into Feature fragment:
+```XML
+<ComponentRef Id="DesktopShortcut" />
+```
+![STEP2](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3.PNG)
+
+**EXPECTED OUTCOME:**
+If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another in the desktop, and it could be uninstalled through Control Panel.
+
+![STEP2OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3OUTCOME.PNG)

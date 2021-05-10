@@ -232,27 +232,26 @@ Into Directory System fragment:
 
 Into Shortcut Component fragment:
 ```XML
-<DirectoryRef Id="ApplicationProgramsFolder">
-       <Component Id="StartMenuShortcut" Guid="ea2fc581-b635-4278-a8f1-1a81320d803a">
-          <Shortcut Id="ApplicationStartMenuShortcut" 
-                 Name="My UPC App" 
-                 Description="My UPC App Description"
-                 Target="[#Game.exe]"
-                 WorkingDirectory="INSTALLFOLDER"
-                 Icon = "icon.ico"/> 
-          <RemoveFolder Id="RemoveProgramsFolder" On="uninstall"/>
-          <RegistryValue Root="HKCU" Key="Software\MyCompany\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
-       </Component>
-   </DirectoryRef>
+ <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="StartMenuShortcut" Guid="ea2fc581-b635-4278-a8f1-1a81320d803a">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+               Name="MyInstaller"
+               Description="My UPC Game Description"
+               Target="[#Game.exe]"
+               WorkingDirectory="INSTALLFOLDER"/>
+        <RemoveFolder Id="RemoveProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\MyCompany\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
 ```
 
 Into Feature fragment:
 ```XML
 <ComponentRef Id="StartMenuShortcut" /> 
 ```
-![STEP0&1](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1.PNG)
+![STEP2](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP2.PNG)
 
 **EXPECTED OUTCOME:**
-If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory and it could be uninstalled through Control Panel.
+If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and it can be uninstalled through Control Panel.
 
-![STEP0&1OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1OUTCOME.PNG)
+![STEP2OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP2OUTCOME.PNG)

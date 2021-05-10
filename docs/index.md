@@ -316,10 +316,11 @@ Into Product fragment:
 <WixVariable Id="WixUILicenseRtf" Value="assets\License.rtf" />
 ```
 
-
+GIF OF THE REFERENCE INCLUSION THROUGH VISUAL STUDIO
 ![STEP5]()
 
 **EXPECTED OUTCOME:**
 If we run the installation right now we would have an attended installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another the desktop, all with custom icons, and it could be uninstalled through Control Panel.
 
+GIF OF THE INSTALLATION
 ![STEP5OUTCOME]()

@@ -40,7 +40,7 @@ One such technique is **application packaging**, which is a critical component o
 
 ![Attended installation](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/WizardGIF.gif)
 
-  Is the most common form of installation. An installation process usually needs a user who attends it to make choices, such as accepting or declining an end-user license      agreement (EULA), specifying preferences such as the installation location, supplying passwords or assisting in product activation.
+  It's the most common form of installation. An installation process usually needs a user who attends it to make choices, such as accepting or declining an end-user license      agreement (EULA), specifying preferences such as the installation location, supplying passwords or assisting in product activation.
 
 **2. Silent installation**
 
@@ -205,4 +205,54 @@ Into the Feature fragment:
 ```XML
 <ComponentGroupRef Id="ProductComponents" />
 ```
+![STEP0&1](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1.PNG)
 
+**EXPECTED OUTCOME:**
+If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory and it could be uninstalled through Control Panel.
+
+![STEP0&1OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1OUTCOME.PNG)
+
+### Step 2
+
+**Description:**
+We have to add the start menu shortcut, to do so we have to first add the StartMenuShortcut component inside the ApplicationProgramsFolder directory which is inside the ProgramMenuFolder directory.
+1. But first we need to notify the framework the existence of ApplicationProgramsFolder directory. In our case, we already have that fragment for the directories created.
+2. Then create a fragment for the shortcuts and put the necessary code there.
+3. And finally, add the component reference of the StartMenuShortcut component into the Feature fragment.
+
+
+**CODE:**
+
+Into Directory System fragment:
+```XML
+<Directory Id="ProgramMenuFolder">
+                <Directory Id="ApplicationProgramsFolder" Name="My UPC App"/>
+         </Directory>
+```
+
+Into Shortcut Component fragment:
+```XML
+<DirectoryRef Id="ApplicationProgramsFolder">
+       <Component Id="StartMenuShortcut" Guid="ea2fc581-b635-4278-a8f1-1a81320d803a">
+          <Shortcut Id="ApplicationStartMenuShortcut" 
+                 Name="My UPC App" 
+                 Description="My UPC App Description"
+                 Target="[#Game.exe]"
+                 WorkingDirectory="INSTALLFOLDER"
+                 Icon = "icon.ico"/> 
+          <RemoveFolder Id="RemoveProgramsFolder" On="uninstall"/>
+          <RegistryValue Root="HKCU" Key="Software\MyCompany\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+       </Component>
+   </DirectoryRef>
+```
+
+Into Feature fragment:
+```XML
+<ComponentRef Id="StartMenuShortcut" /> 
+```
+![STEP0&1](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1.PNG)
+
+**EXPECTED OUTCOME:**
+If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory and it could be uninstalled through Control Panel.
+
+![STEP0&1OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1OUTCOME.PNG)

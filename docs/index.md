@@ -329,3 +329,25 @@ Into Product fragment:
 If we run the installation right now we would have an attended installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another the desktop, all with custom icons, and it could be uninstalled through Control Panel.
 
 ![STEP5OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP5INSTALLER.gif)
+
+### Step 6
+
+**Description:**
+Finally, the installer is almost completed, we have to just include the final line so that `Product.wxs` gets the assets and dlls from `HeatGeneratedFileList.wxs.` Also, we have to define in the properties of our project a **preprocessor variable: <<HarvestPath=..\Output>>**
+
+![STEP6BEFORE](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP6BEFORE.gif)
+
+**CODE:**
+
+Into Feature fragment:
+```XML
+ <ComponentGroupRef Id="HeatGenerated" />
+```
+
+![STEP6](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP6CODE.PNG)
+
+**EXPECTED OUTCOME:**
+If we run the installation right now we would have an attended installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another the desktop, all with custom icons, and it could be uninstalled through Control Panel.
+
+![STEP6OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP6FINAL.gif)
+

@@ -189,18 +189,20 @@ Components have **GUID** to avoid duplications in updates o reparations. You can
 ### Step 1
 
 **Description:**
-We have to add the .exe file of our application as a component inside a component or component group. In this case, there is already existing a component group, so we just have to add our component code fragment.
+We have to add the `.exe` file of our application as a component inside a component or component group. In this case, there is already existing a component group, so we just have to add our component inside the component group code fragment.
 
 **CODE:**
-Into the Component fragment:
 
+Into the ComponentGroup fragment:
 ```XML
 <Component Id="Game.exe" Guid="4b886816-febd-4e5c-a87f-923960027d5c">
-                <File Id="Game.exe" Source="..\Build\Release\Motor 2D.exe" KeyPath="yes" Checksum="yes" />
+                <File Id="Game.exe" Source="..\Build\Release\Game.exe" KeyPath="yes" Checksum="yes" />
             </Component> 
 ```
+
 Into the Feature fragment:
+<!-- In our case, this is already created -->
 ```XML
-<ComponentRef Id="Motor_2D.exe"/>
+<ComponentGroupRef Id="ProductComponents" />
 ```
 

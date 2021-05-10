@@ -1,32 +1,6 @@
-## Game Installer Creation
+# Game Installer Creation
 
 You can use the [editor on GitHub](https://github.com/FeroXx07/Game-Installer-Creation/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ## What is a Installation?
 Let’s start with the basics, Installation of a computer program is **the act of making the program ready for execution**. Installation refers to the configuration of a software or hardware with a view to making it usable with the computer. A soft or digital copy of the piece of software (program) is needed to install it. 
@@ -263,7 +237,7 @@ We have to add the desktop shortcut, do same as the previous step, but with mino
 
 **CODE:**
 
-Into Directory System fragment:
+Into Directory fragment:
 ```XML
 <Directory Id="DesktopFolder" Name="My UPC App" />
 ```
@@ -287,9 +261,35 @@ Into Feature fragment:
 ```XML
 <ComponentRef Id="DesktopShortcut" />
 ```
-![STEP2](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3.PNG)
+![STEP3](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3.PNG)
 
 **EXPECTED OUTCOME:**
 If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another in the desktop, and it could be uninstalled through Control Panel.
 
-![STEP2OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3OUTCOME.PNG)
+![STEP3OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3OUTCOME.PNG)
+
+### Step 4
+
+**Description:**
+We have to customize the **icon** of the shortcuts. To do so, we have to create a folder assets inside the installer directory and in the `product.wxs` we have to include some code into the product fragment and some other into the shortcuts.
+
+![STEP4BEFORE](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4BEFORE.PNG)
+
+**CODE:**
+
+Into Product fragment:
+```XML
+<Icon Id="icon.ico" SourceFile="assets\MyIcon.ico" />
+<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+```
+
+Into Shortcut Id fragments:
+```XML
+ Icon = "icon.ico"/>
+```
+![STEP4](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4.PNG)
+
+**EXPECTED OUTCOME:**
+If we run the installation right now we would have a silent installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another the desktop, all with custom icons, and it could be uninstalled through Control Panel.
+
+![STEP4OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4OUTCOME.PNG)

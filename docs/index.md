@@ -299,6 +299,8 @@ If we run the installation right now we would have a silent installation, the ga
 **Description:**
 We have to add dialogs so users can accept or decline **license conditions or other agreements**, and even **choose the directory of the installation**. Also so we can customize the visuals of the dialog with `.bmp` archives and add a our project’s license in `.rtf` format. But before everything, we have to include in our `.wixproj` as a **reference** the _“WixUIExtension”_ `dll` provided by Wix Toolset, once that is done then we include it as a _UIRef_ in the `product.wxs`
 
+![STEP5BEFORE](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP5.gif)
+
 **CODE:**
 
 Into Product fragment:
@@ -308,19 +310,22 @@ Into Product fragment:
 ```
 
 ```XML
-<WixVariable Id="WixUIBannerBmp" Value="assets\ui_background.bmp" />
-    <WixVariable Id="WixUIDialogBmp" Value="assets\ui_background.bmp" />
+<WixVariable Id="WixUIBannerBmp" Value="assets\TopBanner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="assets\BackgroundBanner.bmp" />
 ```
 
 ```XML
 <WixVariable Id="WixUILicenseRtf" Value="assets\License.rtf" />
 ```
 
-GIF OF THE REFERENCE INCLUSION THROUGH VISUAL STUDIO
-![STEP5]()
+|       WiX     |       BMP     |     SIZES    |
+| ------------- | ------------- |------------- |
+|WixUIBannerBmp | Top banner    | 493 × 58     |
+|WixUIDialogBmp | Background bitmap used on the welcome and completion dialogs | 493 × 312     |
+
+![STEP5](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP5.PNG)
 
 **EXPECTED OUTCOME:**
 If we run the installation right now we would have an attended installation, the game would be installed in the ProgramFilesFolder directory with a shortcut in the start menu and another the desktop, all with custom icons, and it could be uninstalled through Control Panel.
 
-GIF OF THE INSTALLATION
-![STEP5OUTCOME]()
+![STEP5OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP5INSTALLER.gif)

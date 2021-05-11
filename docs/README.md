@@ -420,6 +420,9 @@ The lack of and GUI is noticed a lot, specially for newcomers into this tool. Th
 - [WiX Improvements Proposals](https://wixtoolset.org/development/wips/)
 - [GUID generator](https://www.guidgenerator.com/online-guid-generator.aspx)
 - [Digital signing](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))
+- [Signtool basics](https://docs.microsoft.com/es-es/windows/win32/seccrypto/signtool)
+- [Signtool with msi](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/ee290833(v=vs.100))
 - [Certificates generator](https://certificatetools.com/)
 - [NSIS](https://nsis.sourceforge.io/Main_Page)
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 

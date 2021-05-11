@@ -367,3 +367,30 @@ If we run the installation right now we would have an attended installation, the
 
 ![STEP6OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP6FINAL.gif)
 
+# Digital signing
+
+We use **digital signatures** when we want to distribute data, and we want to assure recipients that it does indeed come from us. 
+Signing data does not alter it; it simply generates a digital signature string you can bundle with the data.
+
+Digital signatures are created using a public-key signature algorithm such as the RSA public-key cipher. 
+A public-key algorithm actually uses two different keys: the public key and the private key (called a key pair). 
+The private key is known only to its owner, while the public key can be available to anyone.
+SignTool.exe, SignTool is a command line tool that is used to sign an application package or a batch of applications with a certificate.
+
+The tool is installed with [Microsoft Windows Software Development Kit (SDK)](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/) installation path. Then we need Microsoft Windows SDK to be able to work with SignTool.exe.
+
+1. On the development computer, install the certificate that you want to sign the file with.
+
+2. Open a Visual Studio command prompt throught visual studio tools.
+
+3. Change to the directory that contains the .msi file.
+
+4. Sign the .msi file by using the following command:
+
+```CMD
+signtool sign /sha1 CertificateHash SetupNameFile.msi
+```
+# Testing on Virtual Machines
+
+
+

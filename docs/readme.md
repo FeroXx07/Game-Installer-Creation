@@ -97,6 +97,14 @@ In the industry there are many packaging tools. The top ones are the following:
 
 ![Advanced Installer](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/AdvanceInstaller.jpg)
 
+-**NSIS:** Nullsoft Scriptable Install System, is a small and fast package bundler, it has some of the best compression methods like LZMA and it is fully customizable, from interfaces to wizards. Also, it is compatible with all Windows versions. It is mainly script based and supports plug-ins.
+
+![NSIS](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/NSIS.jpg)
+
+-**Inno Setup:** Very extensive in sense of features, it is also fully customizable. Inno also supports digital signing and uses 7-zip LZMA/LZMA2 file compression. It is mainly script based.
+
+![Inno Setup](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/INNOSETUP.png)
+
 -**WiX:** The main selling point is the text source files. There is no need to store the source as a binary where it is almost impossible to track changes and do proper version control. This helps a lot when working in different branches, versions, and merging. And it has Full integration in Visual Studio.
 
 ![Wix](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/WixTool.gif)

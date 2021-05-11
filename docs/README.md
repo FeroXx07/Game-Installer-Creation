@@ -404,5 +404,22 @@ Virtual machines are one of the easiest ways of testing software on simulated, y
 
 More detailed information of the process can be found [here.](https://az792536.vo.msecnd.net/vms/release_notes_license_terms_8_1_15.pdf) 
 
+# Possible Improvements/Innovations
+The lack of and GUI is noticed a lot, specially for newcomers into this tool. There are third party visual studio extensions like [IsWix](http://iswix.com/projects/) or tools like [Wax](https://github.com/tom-englert/Wax) that supply this lack of user interface.
 
+# Documentation Links and References
+- [Application packaging](https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=1b1b89b8-c3a0-4bbd-a498-44f76a777eb9&CommunityKey=41d8253b-a238-4563-8718-ed7623beafbc&tab=librarydocuments)
+- [MSI/Setup package for C# with WiX Toolset](https://www.mesta-automation.com/create-an-installer-for-c-sharp-with-wix/)
+- [MSI/Setup package for C# with WiX Toolset VIDEO](https://www.youtube.com/watch?v=-wyUxQux7xY)
+- [About Windows Installer Service](http://www.installsite.org/pages/en/w2k_aboutmsi.htm)
+- [About Windows Installer](https://docs.microsoft.com/en-US/windows/win32/msi/windows-installer-portal)
+- [Basics of Application packaging](https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf)
+- [Installation wikipedia](https://en.wikipedia.org/wiki/Installation_(computer_programs))
+- [Software Deployment](https://www.sumologic.com/glossary/software-deployment/)
+- [Differences between InstallShield, WiX, Wise, Advanced Installer...](https://stackoverflow.com/questions/1544292/what-installation-product-to-use-installshield-wix-wise-advanced-installer/1546941#1546941)
+- [WiX Improvements Proposals](https://wixtoolset.org/development/wips/)
+- [GUID generator](https://www.guidgenerator.com/online-guid-generator.aspx)
+- [Digital signing](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))
+- [Certificates generator](https://certificatetools.com/)
+- [NSIS](https://nsis.sourceforge.io/Main_Page)
 

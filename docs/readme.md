@@ -1,7 +1,5 @@
 # Game Installer Creation
 
-You can use the [editor on GitHub](https://github.com/FeroXx07/Game-Installer-Creation/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
 ## What is a Installation?
 Let’s start with the basics, Installation of a computer program is **the act of making the program ready for execution**. Installation refers to the configuration of a software or hardware with a view to making it usable with the computer. A soft or digital copy of the piece of software (program) is needed to install it. 
 

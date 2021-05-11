@@ -383,22 +383,22 @@ The tool is installed with [Microsoft Windows Software Development Kit (SDK)](ht
 
 2. Open a Visual Studio command prompt throught visual studio tools.
 
-3. Change to the directory that contains the .msi file.
+3. Change to the directory that contains the `.msi` file.
 
-4. Sign the .msi file by using the following command:
+4. Sign the `.msi` file by using the following command:
 
 ```CMD
 signtool sign /sha1 CertificateHash SetupNameFile.msi
 ```
 # Testing on Virtual Machines
 
-Virtual machines are one of the easiest ways of testing software on simulated, yet full operating systems, we’ll be working with Virtual Box, you can download it by clicking [here](https://www.virtualbox.org/wiki/Downloads). Also, we’ll need VirtualBox windows iso files that can be downloaded from [here](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
+Virtual machines are one of the easiest ways of testing software on simulated, yet full operating systems, we’ll be working with Virtual Box, you can download it by clicking [here](https://www.virtualbox.org/wiki/Downloads). Also, we’ll need VirtualBox windows `.iso` files that can be downloaded from [here](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
 
 -The process is simple, once the VirtualBox and its drivers are installed:
 
 -Click NEW to create a new virtual machine and follow the process of disk space and ram allocation.
 
--After that, the wizard will ask you to choose a .iso file to boot the operating system of our choice.
+-After that, the wizard will ask you to choose a `.iso` file to boot the operating system of our choice.
 
 -Finally, before anything else take a “snapshot” through the machine option, it will work like a backup. And to import files from our PC to the simulated operating system just change drag and drop feature to bidirectional through the devices option in the top bar.
 

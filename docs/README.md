@@ -1,7 +1,5 @@
 # Game Installer Creation
 
-You can use the [editor on GitHub](https://github.com/FeroXx07/Game-Installer-Creation/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
 ## What is a Installation?
 Let’s start with the basics, Installation of a computer program is **the act of making the program ready for execution**. Installation refers to the configuration of a software or hardware with a view to making it usable with the computer. A soft or digital copy of the piece of software (program) is needed to install it. 
 
@@ -295,12 +293,14 @@ Into Shortcut Id fragments:
 ```XML
  Icon = "icon.ico"/>
 ```
-|       WiX      |       ICON     |     SIZES    |
-| -------------  | -------------  |------------- |
-|Icon            | icon.ico       |16×16         |
-|Icon            | icon.ico       |32 * 32       |              
-|Icon            | icon.ico       |48 * 48       |              
-|Icon            | icon.ico       |256 * 256     |              
+
+|       WiX      |       ICON     |     SIZES     |
+| -------------  | -------------  | ------------- |
+| Icon           | icon.ico       | 16×16         |
+| Icon           | icon.ico       | 32 * 32       |               
+| Icon           | icon.ico       | 48 * 48       |              
+| Icon           | icon.ico       | 256 * 256     |              
+
 
 ![STEP4](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4.PNG)
 
@@ -391,6 +391,18 @@ The tool is installed with [Microsoft Windows Software Development Kit (SDK)](ht
 signtool sign /sha1 CertificateHash SetupNameFile.msi
 ```
 # Testing on Virtual Machines
+
+Virtual machines are one of the easiest ways of testing software on simulated, yet full operating systems, we’ll be working with Virtual Box, you can download it by clicking [here](https://www.virtualbox.org/wiki/Downloads). Also, we’ll need VirtualBox windows iso files that can be downloaded from [here](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
+
+-The process is simple, once the VirtualBox and its drivers are installed:
+
+-Click NEW to create a new virtual machine and follow the process of disk space and ram allocation.
+
+-After that, the wizard will ask you to choose a .iso file to boot the operating system of our choice.
+
+-Finally, before anything else take a “snapshot” through the machine option, it will work like a backup. And to import files from our PC to the simulated operating system just change drag and drop feature to bidirectional through the devices option in the top bar.
+
+More detailed information of the process can be found [here.](https://az792536.vo.msecnd.net/vms/release_notes_license_terms_8_1_15.pdf) 
 
 
 

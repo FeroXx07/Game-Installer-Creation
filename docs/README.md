@@ -293,12 +293,14 @@ Into Shortcut Id fragments:
 ```XML
  Icon = "icon.ico"/>
 ```
-|       WiX      |       ICON     |     SIZES    |
-| -------------  | -------------  | -------------|
-| Icon           | icon.ico       | 16×16        |
-| Icon           | icon.ico       | 32 * 32      |               
-| Icon           | icon.ico       | 48 * 48      |              
-| Icon           | icon.ico       | 256 * 256    |              
+
+|       WiX      |       ICON     |     SIZES     |
+| -------------  | -------------  | ------------- |
+| Icon           | icon.ico       | 16×16         |
+| Icon           | icon.ico       | 32 * 32       |               
+| Icon           | icon.ico       | 48 * 48       |              
+| Icon           | icon.ico       | 256 * 256     |              
+
 
 ![STEP4](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4.PNG)
 

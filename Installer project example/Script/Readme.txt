@@ -1,0 +1,1 @@
+This is the script only, check MyInstaller folder for other files.

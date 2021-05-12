@@ -107,9 +107,9 @@ In the industry there are many packaging tools. The top ones are the following:
 
 ![Wix](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/WixTool.gif)
 
-## WiX Toolset
+# WiX Toolset
 
-### Prerequisites
+## Prerequisites
 The selected approach will be Wix, because it excels in its flexibility, extensibility, stability, and the use of XML text source. And due to its free license, every developer can view and compile the source and changes are easily tracked, reverted, or approved.
 
 ![WiXLogo](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/WiXLOGO.png)
@@ -164,9 +164,9 @@ Shortly explained, the script is divided by **fragments**, we use **component an
 
 Components have **GUID** to avoid duplications in updates o reparations. You can use this [website](https://www.guidgenerator.com/online-guid-generator.aspx) to generate GUIDs or use the visual studio internal tool to generate GUIDs. The step 0 is to change the **Manufacturer** name to the name of you studio, otherwise it won’t build.
 
-## Customization and mapping of the script.
+# Customization and mapping of the script.
 
-### Step 1
+## Step 1
 
 **Description:**
 We have to add the `.exe` file of our application as a component inside a component or component group. In this case, there is already existing a component group, so we just have to add our component inside the component group code fragment.
@@ -192,7 +192,7 @@ If we run the installation right now we would have a silent installation, the ga
 
 ![STEP0&1OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP0ANDSTEP1OUTCOME.PNG)
 
-### Step 2
+## Step 2
 
 **Description:**
 We have to add the start menu shortcut, to do so we have to first add the StartMenuShortcut component inside the ApplicationProgramsFolder directory which is inside the ProgramMenuFolder directory.
@@ -236,7 +236,7 @@ If we run the installation right now we would have a silent installation, the ga
 
 ![STEP2OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP2OUTCOME.PNG)
 
-### Step 3
+## Step 3
 
 **Description:**
 We have to add the desktop shortcut, do same as the previous step, but with minor changes like the different directory, in this case DesktopFolder is the directory. 
@@ -274,7 +274,7 @@ If we run the installation right now we would have a silent installation, the ga
 
 ![STEP3OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP3OUTCOME.PNG)
 
-### Step 4
+## Step 4
 
 **Description:**
 We have to customize the **icon** of the shortcuts. To do so, we have to create a folder assets inside the installer directory and in the `product.wxs` we have to include some code into the product fragment and some other into the shortcuts.
@@ -309,7 +309,7 @@ If we run the installation right now we would have a silent installation, the ga
 
 ![STEP4OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/images/STEP4OUTCOME.PNG)
 
-### Step 5
+## Step 5
 
 **Description:**
 We have to add dialogs so users can accept or decline **license conditions or other agreements**, and even **choose the directory of the installation**. Also so we can customize the visuals of the dialog with `.bmp` archives and add a our project’s license in `.rtf` format. But before everything, we have to include in our `.wixproj` as a **reference** the _“WixUIExtension”_ `dll` provided by Wix Toolset, once that is done then we include it as a _UIRef_ in the `product.wxs`
@@ -346,7 +346,7 @@ If we run the installation right now we would have an attended installation, the
 
 ![STEP5OUTCOME](https://raw.githubusercontent.com/FeroXx07/Game-Installer-Creation/main/docs/gifs/STEP5INSTALLER.gif)
 
-### Step 6
+## Step 6
 
 **Description:**
 Finally, the installer is almost completed, we have to just include the final line so that `Product.wxs` gets the assets and dlls from `HeatGeneratedFileList.wxs.` Also, we have to define in the properties of our project a **preprocessor variable: <<HarvestPath=..\Output>>**

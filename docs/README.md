@@ -123,7 +123,7 @@ The first one is the “WiX Toolset build tools” that includes everything you 
 
 In the creation of the installer script, you will have to define properties and add directories and components. You will see this now.
 
-## Setup and creation of the script.
+# Setup and creation of the script.
 
 In order to create the script, you will have to add a new project in the Visual Studio solution. The type of project needs to be the following: “Setup Project for WiX v3”. 
 

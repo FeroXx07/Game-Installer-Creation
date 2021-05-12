@@ -162,7 +162,7 @@ Before going deep into this, it is recommended to read the documentation or the 
 
 Shortly explained, the script is divided by **fragments**, we use **component and directories references** to tell the framework other components and directories that **exist** in other **fragments**.
 
-Components have **GUID** to avoid duplications in updates o reparations. You can use this [website](https://www.guidgenerator.com/online-guid-generator.aspx) to generate GUIDs or use the visual studio internal tool to generate GUIDs. The step 0 is to change the **Manufacturer** name to the name of you studio, otherwise it won’t build.
+Components have **GUID** to avoid duplications in updates o reparations. You can use this [website](https://www.guidgenerator.com/online-guid-generator.aspx) to generate GUIDs or use the visual studio internal tool to generate GUIDs. The step 0 is to change the **Manufacturer** name to the name of your studio, otherwise it won’t build.
 
 # Customization and mapping of the script.
 
